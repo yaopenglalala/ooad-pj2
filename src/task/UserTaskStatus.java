@@ -1,5 +1,5 @@
 package task;
 
 public enum UserTaskStatus {
-    active, finished
+    Active, Finished
 }
