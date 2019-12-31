@@ -1,4 +1,4 @@
-package task.point;
+package transaction;
 
 public class Flow {
 }
