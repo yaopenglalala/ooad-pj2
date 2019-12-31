@@ -1,5 +1,8 @@
 package task.point;
 
+/**
+ * 积分计算策略
+ */
 public class TaskPointCalcStrategy {
     private int initNumber;
 

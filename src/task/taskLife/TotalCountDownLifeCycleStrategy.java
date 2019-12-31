@@ -1,5 +1,8 @@
 package task.taskLife;
 
+/**
+ * 自定义次数任务生命周期
+ */
 public class TotalCountDownLifeCycleStrategy extends TaskLifeCycleStrategy {
     private int limitCount;
 

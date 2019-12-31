@@ -6,7 +6,9 @@ import user.User;
 import user.UserGroup;
 
 import java.util.List;
-
+/**
+ * 任务执行者
+ */
 public class TaskPerformer {
     private User user;
     private List<UserTask> tasks;
