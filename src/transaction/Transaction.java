@@ -7,10 +7,12 @@ import java.util.Date;
  */
 public class Transaction {
     private Date time;
+    private int amount;
     private String commit;
 
-    public Transaction(Date time, String commit) {
+    public Transaction(Date time, int amount, String commit) {
         this.time = time;
+        this.amount = amount;
         this.commit = commit;
     }
 
@@ -20,5 +22,9 @@ public class Transaction {
 
     public String getCommit() {
         return commit;
+    }
+
+    public int getAmount() {
+        return amount;
     }
 }

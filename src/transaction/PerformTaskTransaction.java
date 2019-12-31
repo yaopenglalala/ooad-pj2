@@ -2,7 +2,6 @@ package transaction;
 
 
 import task.TaskDef;
-import task.UserTaskAction;
 
 import java.util.Date;
 
@@ -12,8 +11,8 @@ import java.util.Date;
 public class PerformTaskTransaction extends Transaction {
     private TaskDef definition;
 
-    public PerformTaskTransaction(TaskDef definition, Date time, String commit) {
-        super(time, commit);
+    public PerformTaskTransaction(TaskDef definition, Date time, int amount, String commit) {
+        super(time, amount, commit);
         this.definition = definition;
     }
 

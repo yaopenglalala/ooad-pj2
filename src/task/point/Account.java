@@ -1,19 +1,20 @@
 package task.point;
 
+import transaction.Flow;
+import transaction.Transaction;
+
 public class Account {
-    private int number;
+    private Flow flow;
 
     public Account(){
-        this.number = 0;
+        this.flow = new Flow();
     }
 
-    public int addPoint(int num){
-        this.number += num;
-        return this.number;
+    public void addTransaction(Transaction transaction) {
+        flow.addTransaction(transaction);
     }
 
-    public int reducePoint(int num){
-        this.number -= num;
-        return this.number;
+    public Flow getFlow() {
+        return flow;
     }
 }

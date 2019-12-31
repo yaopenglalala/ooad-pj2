@@ -25,4 +25,8 @@ public class TaskLifeCycleStrategy {
     public int getCount() {
         return count;
     }
+
+    public LifeCycleStrategy getType() {
+        return type;
+    }
 }

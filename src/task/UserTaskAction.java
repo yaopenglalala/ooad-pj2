@@ -3,13 +3,14 @@ package task;
 import java.util.Date;
 
 public class UserTaskAction {
+    private TaskDef definition;
     private Date actionTime;
 
     public UserTaskAction() {
     }
 
-    public UserTaskAction(Date actionTime) {
-        this.actionTime = actionTime;
+    public UserTaskAction(TaskDef definition) {
+        this.definition = definition;
     }
 
     public Date getActionTime() {
