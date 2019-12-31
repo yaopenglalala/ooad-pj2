@@ -4,6 +4,7 @@ import task.taskLife.TaskLifeCycleStrategy;
 import task.point.TaskPointCalcStrategy;
 import transaction.PerformTaskTransaction;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -14,13 +15,10 @@ public class UserTask {
     private TaskPointCalcStrategy calcStrategy;
     private TaskLifeCycleStrategy lifeCycleStrategy;
 
-    public UserTask() {
-    }
-
-    public UserTask(TaskDef definition, TaskPerformer performer, List<UserTaskAction> actions, TaskPointCalcStrategy calcStrategy, TaskLifeCycleStrategy lifeCycleStrategy) {
+    public UserTask(TaskDef definition,TaskPointCalcStrategy calcStrategy, TaskLifeCycleStrategy lifeCycleStrategy) {
         this.definition = definition;
         this.status = UserTaskStatus.Active;
-        this.actions = actions;
+        this.actions = new ArrayList<>();
         this.calcStrategy = calcStrategy;
         this.lifeCycleStrategy = lifeCycleStrategy;
     }

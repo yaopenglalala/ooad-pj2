@@ -5,6 +5,7 @@ import transaction.PerformTaskTransaction;
 import user.User;
 import user.UserGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 /**
  * 任务执行者
@@ -16,7 +17,13 @@ public class TaskPerformer {
 
     TaskPerformer(String name){
         user = UserGroup.getUserGroup().getUser(name);
+        tasks = new ArrayList<>();
         account = new Account();
+    }
+
+    public boolean addTask(UserTask task){
+        this.tasks.add(task);
+        return true;
     }
 
     public boolean complete(UserTask task, String commit) {
@@ -45,5 +52,13 @@ public class TaskPerformer {
 
     public Account getAccount() {
         return account;
+    }
+
+    public UserTask getTask(TaskDef taskDef){
+        for (UserTask task: tasks){
+            if (task.getDefinition().equals(taskDef)) return task;
+        }
+
+        return null;
     }
 }

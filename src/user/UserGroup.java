@@ -17,7 +17,7 @@ public class UserGroup {
     }
 
     public boolean addUser(String name){
-        if (this.getUser(name) == null ) return false;
+        if (this.getUser(name) != null) return false;
         int id = users.size();
         users.add(new User(id, name));
         return true;

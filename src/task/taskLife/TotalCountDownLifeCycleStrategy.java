@@ -6,7 +6,7 @@ package task.taskLife;
 public class TotalCountDownLifeCycleStrategy extends TaskLifeCycleStrategy {
     private int limitCount;
 
-    TotalCountDownLifeCycleStrategy(int limitCount){
+    public TotalCountDownLifeCycleStrategy(int limitCount){
         super(LifeCycleStrategy.unlimited);
         this.limitCount = limitCount;
     }

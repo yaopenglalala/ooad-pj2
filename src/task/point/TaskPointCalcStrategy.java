@@ -6,7 +6,7 @@ package task.point;
 public class TaskPointCalcStrategy {
     private int initNumber;
 
-    TaskPointCalcStrategy (int num) {
+    public TaskPointCalcStrategy (int num) {
         this.initNumber = num;
     }
 
