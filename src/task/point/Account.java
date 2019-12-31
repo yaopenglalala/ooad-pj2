@@ -3,7 +3,7 @@ package task.point;
 public class Account {
     private int number;
 
-    Account(){
+    public Account(){
         this.number = 0;
     }
 

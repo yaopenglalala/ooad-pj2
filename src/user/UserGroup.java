@@ -13,8 +13,17 @@ public class UserGroup {
         return instace;
     }
 
-    public void addUser(String name){
+    public boolean addUser(String name){
+        if (this.getUser(name) == null ) return false;
         int id = users.size();
         users.add(new User(id, name));
+        return true;
+    }
+
+    public User getUser(String name){
+        for (User user : users){
+            if(user.getName().equals(name)) return user;
+        }
+        return null;
     }
 }

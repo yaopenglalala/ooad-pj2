@@ -1,6 +1,6 @@
 package task;
 
-import task.point.TaskLifeCycleStrategy;
+import task.taskLife.TaskLifeCycleStrategy;
 import task.point.TaskPointCalcStrategy;
 
 import java.util.List;
