@@ -1,5 +1,8 @@
 package task.taskLife;
 
+/**
+ * 任务生命周期
+ */
 public class TaskLifeCycleStrategy {
     private LifeCycleStrategy type;
     private int count;

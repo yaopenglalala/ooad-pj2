@@ -3,6 +3,9 @@ package user;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 所有用户
+ */
 public class UserGroup {
     private static UserGroup instace = new UserGroup();
     private List<User> users = new ArrayList<>();

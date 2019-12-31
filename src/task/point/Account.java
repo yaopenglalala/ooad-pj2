@@ -1,5 +1,8 @@
 package task.point;
 
+/**
+ * 积分账户
+ */
 public class Account {
     private int number;
 

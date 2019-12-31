@@ -4,6 +4,9 @@ import task.point.Account;
 import user.User;
 import user.UserGroup;
 
+/**
+ * 任务执行者
+ */
 public class TaskPerformer {
     private User user;
     private Account account;
