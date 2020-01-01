@@ -33,4 +33,14 @@ public class Flow {
             amount += transaction.getAmount()
         );
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Total point: " + amount + "\n");
+        transactions.forEach(transaction ->
+                stringBuilder.append(transaction.toString() + "\n")
+        );
+        return stringBuilder.toString();
+    }
 }

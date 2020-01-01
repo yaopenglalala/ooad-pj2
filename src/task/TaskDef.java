@@ -14,8 +14,8 @@ public class TaskDef {
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof TaskDef){
-            TaskDef newone = (TaskDef) obj;
-            return this.name.equals(newone.getName());
+            TaskDef newOne = (TaskDef) obj;
+            return this.name.equals(newOne.getName());
         }
         return false;
     }

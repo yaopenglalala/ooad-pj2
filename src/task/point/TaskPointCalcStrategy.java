@@ -17,4 +17,8 @@ public class TaskPointCalcStrategy {
     private int calcPoint(double rate){
         return new Long(Math.round(initNumber * rate)).intValue();
     }
+
+    public int getInitNumber() {
+        return initNumber;
+    }
 }

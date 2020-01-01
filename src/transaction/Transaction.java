@@ -27,4 +27,9 @@ public class Transaction {
     public int getAmount() {
         return amount;
     }
+
+    @Override
+    public String toString() {
+        return "Income:" + amount + " Info:" + commit + " Time:" + time;
+    }
 }

@@ -4,7 +4,7 @@ package task.taskLife;
  * 日常任务生命周期
  */
 public class DailyCountDownLifeCycleStrategy extends TaskLifeCycleStrategy {
-    DailyCountDownLifeCycleStrategy (){
+    public DailyCountDownLifeCycleStrategy (){
         super(LifeCycleStrategy.daily);
     }
 }

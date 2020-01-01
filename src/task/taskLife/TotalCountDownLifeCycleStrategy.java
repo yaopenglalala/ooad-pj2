@@ -7,7 +7,7 @@ public class TotalCountDownLifeCycleStrategy extends TaskLifeCycleStrategy {
     private int limitCount;
 
     public TotalCountDownLifeCycleStrategy(int limitCount){
-        super(LifeCycleStrategy.unlimited);
+        super(LifeCycleStrategy.totalCount);
         this.limitCount = limitCount;
     }
 

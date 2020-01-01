@@ -7,7 +7,7 @@ public class TaskLifeCycleStrategy {
     private LifeCycleStrategy type;
     private int count;
 
-    TaskLifeCycleStrategy (LifeCycleStrategy type){
+    public TaskLifeCycleStrategy (LifeCycleStrategy type){
         this.type = type;
         this.count = 0;
     }

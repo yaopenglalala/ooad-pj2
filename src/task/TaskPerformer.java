@@ -26,7 +26,7 @@ public class TaskPerformer {
         return true;
     }
 
-    public boolean complete(UserTask task, String commit) {
+    public boolean completeTask(UserTask task, String commit) {
         UserTaskAction action = task.done();
         if (action == null) return false;
         // 记录交易
@@ -41,9 +41,16 @@ public class TaskPerformer {
         return true;
     }
 
+    public String getTasksInfo(){
+        StringBuilder res = new StringBuilder();
+        for (UserTask task : tasks){
+            res.append(task.toString());
+        }
+        return res.toString();
+    }
+
     public boolean checkAvailable(){
-        if (this.user == null) return false;
-        return true;
+        return this.user != null;
     }
 
     public User getUser() {

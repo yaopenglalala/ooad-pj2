@@ -2,7 +2,6 @@ package task;
 
 import task.taskLife.TaskLifeCycleStrategy;
 import task.point.TaskPointCalcStrategy;
-import transaction.PerformTaskTransaction;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,6 +20,18 @@ public class UserTask {
         this.actions = new ArrayList<>();
         this.calcStrategy = calcStrategy;
         this.lifeCycleStrategy = lifeCycleStrategy;
+    }
+
+    /**
+     * 字符串形式任务信息
+     */
+    @Override
+    public String toString(){
+        String out = "Type:" + this.lifeCycleStrategy.getType();
+        out = out + " Name:" + this.definition.getName();
+        out = out + " Point:" +this.calcStrategy.getInitNumber();
+        out = out + " Status:"+ this.status + "\n";
+        return out;
     }
 
     public UserTaskAction done() {

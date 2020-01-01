@@ -11,7 +11,7 @@ import task.taskLife.TaskLifeCycleStrategy;
 import user.User;
 import user.UserGroup;
 
-public class TaskService {
+public class AdminService {
     private UserGroup userGroup = UserGroup.getUserGroup();
     private TaskPerformerGroup performerGroup = TaskPerformerGroup.getGroup();
 
