@@ -17,6 +17,10 @@ public class Account {
         flow.addTransaction(transaction);
     }
 
+    public int getPoint() {
+        return flow.getAmount();
+    }
+
     public Flow getFlow() {
         return flow;
     }

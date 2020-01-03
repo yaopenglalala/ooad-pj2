@@ -15,10 +15,10 @@ public class TaskPerformer {
     private List<UserTask> tasks;
     private Account account;
 
-    TaskPerformer(String name){
-        user = UserGroup.getUserGroup().getUser(name);
+    TaskPerformer(User user){
+        this.user = user;
         tasks = new ArrayList<>();
-        account = new Account();
+        account = user.getAccount();
     }
 
     public boolean addTask(UserTask task){
@@ -39,6 +39,10 @@ public class TaskPerformer {
                         task.getDefinition(), action.getActionTime(),
                         task.getCalcStrategy().calcPoint(), commit));
         return true;
+    }
+
+    public void updateTasks() {
+        tasks.forEach(UserTask::updateLifeState);
     }
 
     public String getTasksInfo(){
@@ -65,7 +69,6 @@ public class TaskPerformer {
         for (UserTask task: tasks){
             if (task.getDefinition().equals(taskDef)) return task;
         }
-
         return null;
     }
 }

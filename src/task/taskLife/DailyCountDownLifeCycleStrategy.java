@@ -5,6 +5,6 @@ package task.taskLife;
  */
 public class DailyCountDownLifeCycleStrategy extends TaskLifeCycleStrategy {
     public DailyCountDownLifeCycleStrategy (){
-        super(LifeCycleStrategy.daily);
+        super(LifeCycleStrategy.DAILY);
     }
 }

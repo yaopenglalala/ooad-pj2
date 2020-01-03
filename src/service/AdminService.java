@@ -15,7 +15,7 @@ public class AdminService {
     private UserGroup userGroup = UserGroup.getUserGroup();
     private TaskPerformerGroup performerGroup = TaskPerformerGroup.getGroup();
 
-    public boolean addUser (String name){
+    public boolean addUser(String name){
         return userGroup.addUser(name);
     }
 
@@ -24,7 +24,8 @@ public class AdminService {
     }
 
     public boolean publishTask(UserTask task, String name){
-        performerGroup.addPerformer(name);
+        User user = userGroup.getUser(name);
+        performerGroup.addPerformer(user);
         performerGroup.getPerformer(name).addTask(task);
         return true;
     }

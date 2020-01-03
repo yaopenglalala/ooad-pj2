@@ -1,6 +1,6 @@
 package task;
 
-import user.UserGroup;
+import user.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +15,10 @@ public class TaskPerformerGroup {
         return performers;
     }
 
-    public boolean addPerformer(String name){
-        if (getPerformer(name) != null) return false;
+    public boolean addPerformer(User user){
+        if (getPerformer(user.getName()) != null) return false;
 
-        TaskPerformer newPerformer = new TaskPerformer(name);
+        TaskPerformer newPerformer = new TaskPerformer(user);
         list.add(newPerformer);
         return true;
     }

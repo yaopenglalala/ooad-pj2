@@ -5,6 +5,6 @@ package task.taskLife;
  */
 public class OnceLifeCycleStrategy extends TaskLifeCycleStrategy{
     public OnceLifeCycleStrategy(){
-        super(LifeCycleStrategy.once);
+        super(LifeCycleStrategy.ONCE);
     }
 }

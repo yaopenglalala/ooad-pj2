@@ -9,8 +9,6 @@ import task.point.FixPointStrategy;
 import task.taskLife.DailyCountDownLifeCycleStrategy;
 import task.taskLife.TotalCountDownLifeCycleStrategy;
 
-import static org.junit.Assert.assertEquals;
-
 /**
  * 用户可以查看当前积分总额和流水（即查看这些积分是如何获取的）
  */

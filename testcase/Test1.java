@@ -31,7 +31,7 @@ public class Test1 {
         assertEquals("MoonBird", service.getUserGroup().getUser("MoonBird").getName());
 
         TaskDef taskDef = new TaskDef("Task1");
-        UserTask task = service.createTask(taskDef, new FixPointStrategy(10), new TotalCountDownLifeCycleStrategy(100));
+        UserTask task = service.createTask(taskDef, new FixPointStrategy(10), new TotalCountDownLifeCycleStrategy());
         service.publishTask(task , "MoonBird");
         assertEquals(task, service.getPerformerGroup().getPerformer("MoonBird").getTask(taskDef));
     }

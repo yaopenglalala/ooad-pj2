@@ -18,8 +18,8 @@ public class Flow {
         this.desc = desc;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public int getAmount() {
+        return amount;
     }
 
     public void addTransaction(Transaction transaction) {
@@ -37,9 +37,9 @@ public class Flow {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Total point: " + amount + "\n");
+        stringBuilder.append("Total point: ").append(amount).append("\n");
         transactions.forEach(transaction ->
-                stringBuilder.append(transaction.toString() + "\n")
+                stringBuilder.append(transaction.toString()).append("\n")
         );
         return stringBuilder.toString();
     }

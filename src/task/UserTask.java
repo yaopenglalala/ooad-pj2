@@ -1,5 +1,6 @@
 package task;
 
+import task.taskLife.LifeCycleStrategy;
 import task.taskLife.TaskLifeCycleStrategy;
 import task.point.TaskPointCalcStrategy;
 
@@ -34,7 +35,7 @@ public class UserTask {
         return out;
     }
 
-    public UserTaskAction done() {
+    UserTaskAction done() {
         if (this.status != UserTaskStatus.Active) {
             System.out.println("This Task has Completed.");
             return null;
@@ -49,6 +50,14 @@ public class UserTask {
             status = UserTaskStatus.Finished;
         }
         return action;
+    }
+
+    public boolean updateLifeState() {
+        if (lifeCycleStrategy.getType() == LifeCycleStrategy.DAILY) {
+            status = UserTaskStatus.Active;
+            return true;
+        }
+        return false;
     }
 
     public TaskDef getDefinition() {

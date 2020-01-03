@@ -1,5 +1,4 @@
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import service.AdminService;
@@ -41,7 +40,7 @@ public class Test2 {
 
         TaskPerformer performer = service.getPerformerGroup().getPerformer("MoonBird");
 
-        String expectedOut = "Type:totalCount Name:Task1 Point:10 Status:Active\nType:daily Name:Task2 Point:100 Status:Active\n";
+        String expectedOut = "Type:TOTAL_COUNT Name:Task1 Point:10 Status:Active\nType:DAILY Name:Task2 Point:100 Status:Active\n";
         String realOut = performer.getTasksInfo();
         System.out.print(realOut);
         assertEquals(expectedOut, realOut);

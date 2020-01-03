@@ -30,6 +30,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Income:" + amount + " Info:" + commit + " Time:" + time;
+        return "Income:" + amount + "\t| Info:" + commit + "\t| Time:" + time;
     }
 }
